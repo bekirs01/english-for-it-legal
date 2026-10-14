@@ -1,82 +1,106 @@
 :root {
   color-scheme: light;
-  --ink: #1c1915;
-  --muted: #5c5348;
-  --line: #e4d8c8;
-  --paper: #fbf7f1;
-  --card: #ffffff;
-  --accent: #8c4e22;
+  --ink: #1a1f21;
+  --muted: #4e4943;
+  --line: #e3d8c8;
+  --paper: #f4efe6;
+  --card: #fffbf6;
+  --accent: #2c4c6e;
+  --copper: #8a4e28;
 }
 
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+  font-family: "Iowan Old Style", Palatino, Georgia, serif;
   color: var(--ink);
   background: var(--paper);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 a { color: var(--accent); }
+a:hover { text-decoration-thickness: 2px; }
 
 .skip {
   position: absolute;
   left: 12px;
-  top: -40px;
+  top: -48px;
+  background: var(--card);
+  padding: 8px 12px;
 }
 
 .skip:focus { top: 12px; }
 
 header, main, footer {
-  width: min(720px, calc(100% - 32px));
+  width: min(740px, calc(100% - 32px));
   margin-left: auto;
   margin-right: auto;
 }
 
 header {
-  padding: 28px 0 12px;
+  padding: 32px 0 16px;
   border-bottom: 1px solid var(--line);
 }
 
 .brand {
   margin: 0;
-  font-size: 1.05rem;
-  letter-spacing: 0.02em;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
 }
 
 .brand span {
   display: block;
+  margin-top: 4px;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
 }
 
-nav { margin-top: 14px; }
+nav { margin-top: 16px; }
 
 nav a {
-  margin-right: 16px;
+  display: inline-block;
+  margin: 0 18px 8px 0;
   text-decoration: none;
+  font-weight: 600;
 }
 
-nav a:hover { text-decoration: underline; }
+nav a:hover, nav a:focus { text-decoration: underline; }
 
-main { padding: 28px 0 48px; }
+main { padding: 32px 0 56px; }
 
-h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 12px; }
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  line-height: 1.15;
+  margin: 0 0 14px;
+}
 
-h2 { font-size: 1.25rem; margin: 28px 0 8px; }
+h2 {
+  font-size: 1.28rem;
+  line-height: 1.3;
+  margin: 32px 0 8px;
+  color: var(--accent);
+}
 
 p, li { font-size: 1.05rem; }
+
+ul { padding-left: 1.2rem; }
 
 .card {
   background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 18px 18px 8px;
+  border-radius: 18px;
+  padding: 8px 20px 4px;
+  margin: 18px 0;
 }
 
 footer {
-  padding: 8px 0 36px;
+  padding: 8px 0 40px;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  header, main, footer { width: min(740px, calc(100% - 24px)); }
+  h1 { font-size: 1.7rem; }
 }
