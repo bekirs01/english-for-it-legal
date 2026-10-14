@@ -1,0 +1,82 @@
+:root {
+  color-scheme: light;
+  --ink: #1c1915;
+  --muted: #5c5348;
+  --line: #e4d8c8;
+  --paper: #fbf7f1;
+  --card: #ffffff;
+  --accent: #8c4e22;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+}
+
+a { color: var(--accent); }
+
+.skip {
+  position: absolute;
+  left: 12px;
+  top: -40px;
+}
+
+.skip:focus { top: 12px; }
+
+header, main, footer {
+  width: min(720px, calc(100% - 32px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  padding: 28px 0 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  margin: 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.brand span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+nav { margin-top: 14px; }
+
+nav a {
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+nav a:hover { text-decoration: underline; }
+
+main { padding: 28px 0 48px; }
+
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 12px; }
+
+h2 { font-size: 1.25rem; margin: 28px 0 8px; }
+
+p, li { font-size: 1.05rem; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px 18px 8px;
+}
+
+footer {
+  padding: 8px 0 36px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
